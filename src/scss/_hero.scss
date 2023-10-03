@@ -1,0 +1,53 @@
+.hero {
+	position: relative;
+	height: 100vh;
+	margin-bottom: 500px;
+	// .hero__bg
+	&__bg {
+		img {
+			z-index: -1;
+			position: absolute;
+			width:100vw;
+			height: calc(100vh * 950 / 800);
+			top: 0;
+			left: 0;
+		}
+	}
+
+	// .hero__car
+	&__car {
+		position: absolute;
+		top: calc(100% - 10px);
+		left: 0;
+	}
+
+	// .hero__content
+	&__content {
+		min-height: 100vh;
+	}
+
+	// .hero__title
+	&__title {
+		margin-top: 190px;
+		max-width: 750px;
+		span {
+			color: #FFFFFF;
+			font-family: "DM";
+			font-size: 100px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 100%; /* 100px */
+		}
+	}
+
+	// .hero__btns
+	&__btns {
+		margin-top: 81px;
+		display: flex;
+	}
+
+	// .hero__btn
+	&__btn {
+	}
+}
+

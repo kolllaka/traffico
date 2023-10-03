@@ -1,0 +1,143 @@
+// Container
+.container {
+	max-width: ($containerWidth+$containerPadding)+px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 $containerSidePadding+px;
+
+	@media (max-width:$breakpoint1400) {
+		max-width: 1130px;
+	}
+
+	@media (max-width:$breakpoint992) {
+		max-width: 970px;
+	}
+
+	@media (max-width:$breakpoint768) {
+		max-width: 750px;
+	}
+
+	@media (max-width:$breakpoint480) {
+		max-width: none;
+	}
+}
+
+// Body
+body {
+	background: #FEF8F5;
+	font-family: $fontMain;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	&.locked{
+		overflow: hidden;
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	min-height: 100vh;
+}
+
+// Animations
+// Fade
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+// Images
+._ibg {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+.page {
+
+	// .page__title
+	&__title {
+		color: #EE4D47;
+		font-family: "Rubik";
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 40px; /* 166.667% */
+		letter-spacing: 2.4px;
+	}
+
+	// .page__subtitle
+	&__subtitle {
+		color: #402B2B;
+		font-family: "DM";
+		font-size: 48px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%; /* 67.2px */
+	}
+}
+
+
+a {
+	&:hover {
+		span {
+			color: rgba($color: #FFFFFF, $alpha: .7);
+		}
+	}
+	&:active {
+		span {
+			color: rgba($color: #FFFFFF, $alpha: .3);
+		}
+	}
+}
+
+.btn {
+	cursor: pointer;
+	padding: 20px 24px;
+	border-radius: 5px;
+	background-color: #EE4D47;
+	span {
+		text-transform: uppercase;
+		color: #FFFFFF;
+		font-family: "Rubik";
+		text-align: center;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		letter-spacing: 0.8px;
+		white-space: nowrap;
+	}
+	&:hover {
+		background-color: rgba($color: #EE4D47, $alpha: .9);
+	}
+
+	// .btn__arrow
+	&__arrow {
+		span {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 24px;
+			&::after {
+				content: url("../img/arrow.svg");
+			}
+		}
+	}
+}
+
+.logo {
+	cursor: pointer;
+}

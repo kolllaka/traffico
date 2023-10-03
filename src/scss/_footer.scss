@@ -1,0 +1,129 @@
+.footer {
+
+	// .footer__top
+	&__top {
+		position: relative;
+		padding-top: 38px;
+		padding-bottom: 120px;
+	}
+
+	// .footer__bg
+	&__bg {
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: calc(100vw * 1400 / 1600);
+		background-color: #0F264C;
+	}
+
+	// .footer__body
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-right: 95px;
+	}
+
+	// .footer__logo
+	&__logo {
+	}
+
+	// .footer__links
+	&__links {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 100px;
+	}
+
+	// .footer__item
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	// .footer__link
+	&__link {
+		span{
+			color: #FFF;
+			text-align: center;
+			font-family: "Rubik";
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			letter-spacing: 0.8px;
+			text-transform: uppercase;
+		}
+	}
+
+	// .footer__bottom
+	&__bottom {
+		padding-top: 50px;
+		padding-bottom: 92px;
+	}
+
+	// .footer__copyright
+	&__copyright {
+		span {
+			color: #402B2B;
+			font-family: "Rubik";
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 30px; /* 187.5% */
+		}
+	}
+
+	// .footer__socials
+	&__socials {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 30px;
+	}
+
+	// .footer__social
+	&__social {
+		color: #FFF;
+		flex: 0 0 36px;
+		position: relative;
+		width: 36px;
+		height: 36px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 20px;
+		&::after {
+			z-index: -1;
+			position: absolute;
+			content: "";
+			width: 36px;
+			height: 36px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			background-color: #ED4D47;
+			border-radius: 50%;
+		}
+		&:hover{
+			&::after {
+			background-color: rgba($color: #EE4D47, $alpha: .9);
+			}
+		}
+
+		&._icon-facebook:hover{
+			color: #3B5998;
+		}
+		&._icon-twitter:hover{
+			color: #00acee;
+		}
+		&._icon-instagram:hover{
+			color: #C13584;
+		}
+	}
+}
+

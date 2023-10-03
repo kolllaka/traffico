@@ -1,0 +1,166 @@
+.faq {
+	margin-bottom: 177px;
+	position: relative;
+	// .faq__bg
+	&__bg {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: calc(100vw * 1170 /1600);
+		bottom: 0;
+		background-color: #FDEDE8;
+		border-radius: 200px 0 0 0;
+	}
+
+	// .faq__content
+	&__content {
+		padding-top: 224px;
+		padding-bottom: 221px;
+		position: relative;
+	}
+
+	// .faq__img
+	&__img {
+		position: absolute;
+		top: 0;
+		right: -63px;
+	}
+
+	// .faq__title
+	&__title {
+		margin-bottom: 45px;
+	}
+
+	// .faq__text
+	&__text {
+		max-width: 500px;
+		margin-bottom: 170px;
+	}
+
+	// .faq__permits
+	&__permits {
+	}
+
+	// .faq__addpermit
+	&__addpermit {
+	}
+}
+
+.permits {
+	position: relative;
+	columns: 2;
+	column-gap: 25px;
+	// .permits__item
+	&__item {
+		border-radius: 10px;
+		background: #FFF;
+		box-shadow: 0px 20px 40px 0px rgba(238, 77, 71, 0.10);
+		margin-bottom: 10px;
+		break-inside: avoid;
+	}
+
+	// .permits__title
+	&__title {
+		flex: 1 1 auto;
+		padding: 25px 35px;
+		border-radius: 9px;
+		background: #FFF;
+		box-shadow: 0px 20px 40px 0px rgba(238, 77, 71, 0.10);
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		span {
+			max-width: 400px;
+			color: #402B2B;
+			font-family: "Rubik";
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 30px; /* 166.667% */
+		}
+	}
+
+	// .permits__btn
+	&__btn{
+		flex: 0 0 20px;
+		position: relative;
+		cursor: pointer;
+		width: 20px;
+		height: 20px;
+		//background-color: rgba(11, 11, 11, .2);
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: #EE4D47;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			height: 100%;
+			width: 2px;
+			left: 50%;
+			transition: transform .3s;
+			transform: translateX(-50%) rotate(0deg);
+			background-color: #EE4D47;
+		}
+
+		&.show::before{
+			transition: transform .3s;
+			transform: translateX(-50%) rotate(90deg);
+		}
+	}
+
+	// .permits__body
+	&__body {
+		display: none;
+		padding: 40px 35px 60px;
+		p {
+			color: #402B2B;
+			font-family: "Rubik";
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 30px; /* 166.667% */
+		}
+		&.show {
+			display: block;
+			margin-bottom: 60px;
+		}
+	}
+}
+
+.addpermit {
+	// .addpermit__item
+	&__item{
+		cursor: pointer;
+		padding: 30px;
+		border-radius: 10px;
+		background: rgba($color: #ED4D47, $alpha: .2);
+		position: absolute;
+		width: calc(50% - 12.5px);
+		top: 100%;
+		margin-top: 22px;
+	}
+	// .addpermit__title
+	&__title {
+		display: flex;
+		align-items: center;
+		span {
+			flex: 1 1 100%;
+			text-align: center;
+			color: #ED4D47;
+			text-align: center;
+			font-family: "Rubik";
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 30px; /* 166.667% */
+			letter-spacing: 0.9px;
+		}
+	}
+}

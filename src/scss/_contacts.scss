@@ -1,0 +1,126 @@
+.contacts {
+	position: relative;
+	padding-bottom: 130px;
+	// .contacts__img
+	&__img {
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: calc(100vw * 1400 / 1600);
+		background-color: #0F264C;
+		border-radius: 0 100px 0 0;
+		// position: relative;
+		img {
+			position: absolute;
+			top: -170px;
+			left: 0;
+		}
+		svg {
+			position: absolute;
+			left: -20%;
+			stroke-width: 2px;
+			stroke: rgba(#F37753, 0.2);
+			width: 120%;
+		}
+	}
+
+	// .contacts__content
+	&__content {
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	// .contacts__note
+	&__note {
+		padding: 10px 50px;
+		position: relative;
+		max-width: 330px;
+		margin-top: 100px;
+		margin-bottom: auto;
+		span {
+			color: #FFF;
+			font-family: "Rubik";
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 30px; /* 150% */
+		}
+		&::before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 10px;
+			background-color: #ED4D47;
+			border-radius: 5px 0 0 5px;
+		}
+	}
+
+	// .contacts__form
+	&__form {
+		margin-top: -110px;
+		padding: 52px 75px;
+		border-radius: 10px;
+		background: #FFF;
+		box-shadow: 0px 20px 40px 0px rgba(238, 77, 71, 0.10);
+	}
+
+	// .contacts__label
+	&__label {
+		display: block;
+		margin-bottom: 30px;
+	}
+
+	// .contacts__name
+	&__name {
+		color: #402B2B;
+		font-family: "Rubik";
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 40px; /* 250% */
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	// .contacts__input
+	&__input {
+		min-width: 400px;
+		color: #402B2B;
+		font-family: "Rubik";
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 40px; /* 222.222% */
+
+		padding: 11px 40px;
+		border-radius: 5px;
+		border: 1px solid rgba(238, 77, 71, 0.50);
+		background: #FFF;
+		&::placeholder {
+			color: #402B2B;
+			font-family: "Rubik";
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 40px; /* 222.222% */
+		}
+		&:focus {
+			border: 2px solid #EE4D47;
+			box-shadow: 0px 20px 40px 0px rgba(238, 77, 71, 0.20);
+		}
+	}
+
+	// .contacts__btns
+	&__btns {
+		width: 220px;
+	}
+
+	// .contacts__btn
+	&__btn {
+	}
+}
